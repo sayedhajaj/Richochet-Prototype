@@ -1,0 +1,26 @@
+var canvas = getCanvas();
+canvas = Canvas(160, 170);
+
+canvas.setColor(Color(0,0,0,255));
+
+canvas.beginPath();
+canvas.moveTo(30, 50);
+canvas.bezierCurveTo(20, 200, 150, 200, 130, 50); 
+canvas.closePath();
+canvas.fillPath();
+
+canvas.beginPath();
+canvas.moveTo(30, 50);
+canvas.lineTo(50, 10);
+canvas.quadraticCurveTo(80, 0, 110, 10);
+canvas.lineTo(130, 50);
+canvas.closePath();
+canvas.fillPath();
+
+canvas.setColor(Color(128, 75, 0, 255));
+canvas.fillRect(20, 50, 20, 70);
+canvas.fillRect(10, 75, 10, 20);
+canvas.fillRect(120, 50, 20, 70);
+canvas.fillRect(140, 75, 10, 20);
+
+saveImage(canvas.toImage(), "C:\Users\Sayed Hajaj\Documents\Ricochet_Prototype\Cannon.png");
